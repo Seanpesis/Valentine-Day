@@ -1,2 +1,80 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date Invitation</title>
+<style>
+body {
+font-family: 'Arial', sans-serif;
+text-align: center;
+background-color: #fce4ec;
+color: #ff4081;
+padding: 20px;
+}
+
+#invitation-text {
+font-size: 1.5em;
+margin-bottom: 20px;
+}
+
+#love-effect {
+font-size: 3em;
+color: #ff4081;
+animation: heartbeat 1s infinite;
+}
+
+#yes-btn, #no-btn {
+padding: 10px 20px;
+font-size: 1.2em;
+margin: 10px;
+cursor: pointer;
+}
+
+#no-btn:hover {
+animation: runAway 0.5s ease-in-out;
+}
+
+#us-photo {
+max-width: 100%;
+height: auto;
+border-radius: 10px;
+margin-top: 20px;
+}
+
+@keyframes heartbeat {
+0% { transform: scale(1); }
+50% { transform: scale(1.1); }
+100% { transform: scale(1); }
+}
+
+@keyframes runAway {
+0% { transform: translateX(0); }
+50% { transform: translateX(100vw); }
+100% { transform: translateX(0); }
+}
+</style>
+</head>
+<body>
+<div id="invitation-text">
+<p>Would you like to go on a date with me Baby?</p>
+<span id="love-effect">❤️</span>
+</div>
+
+<button id="yes-btn" onclick="handleResponse('yes')">Yes</button>
+<button id="no-btn" onclick="handleResponse('no')">No</button>
+
+<img id="us-photo" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.daniellebernock.com%2Fhow-to-love-well%2F&psig=AOvVaw2tFi06vprW2EwYN2Ddsqwc&ust=1706803742410000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCJiI18eBiIQDFQAAAAAdAAAAABAE" alt="You and Your Girlfriend">
+</img>
+
+<script>
+function handleResponse(response) {
+if (response === 'yes') {
+alert("Great! Looking forward to our date!");
+} else if (response === 'no') {
+alert("Oh no! Don't run away! 🏃💨");
+}
+}
+</script>
+</body>
+</html>
